@@ -14,7 +14,7 @@ const createCompetiton = () => {
         .then((competitors) => {
 
             const competitionObj = {
-                competitiorOne: {
+                competitorOne: {
                     id: competitors[0]._id,
                     name: competitors[0].name,
                     image: competitors[0].image,

@@ -7,7 +7,7 @@ const Schema = mongoose.Schema
 
 const Competition = new Schema(
     {
-        competitiorOne: {
+        competitorOne: {
             id: {
                 type: mongoose.Schema.Types.ObjectId
             },
