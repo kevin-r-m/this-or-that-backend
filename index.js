@@ -17,7 +17,7 @@ import competitionRouter from './routes/competition-router.js';
 import { createCompetiton } from './controllers/competition-controller.js';
 
 const app = express();
-const apiPort = process.env.API_PORT || 8000;
+const apiPort = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
