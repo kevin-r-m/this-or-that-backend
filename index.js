@@ -34,6 +34,4 @@ app.use('/api', competitionRouter);
 
 cron.schedule("0 0 * * *", () => createCompetiton());
 
-// createCompetiton()
-
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
