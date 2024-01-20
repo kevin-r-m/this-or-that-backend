@@ -46,7 +46,7 @@ const createCompetiton = () => {
  * @param {Object} res - The response object.
  */
 const getCompetition = (req, res) => {
-    Competition.find({}).sort({createdAt: 1}).limit(1)
+    Competition.find({}).sort({createdAt: -1}).limit(1)
         .then(competition => {
             return res.status(200).json({success: true, data: competition})
         })
