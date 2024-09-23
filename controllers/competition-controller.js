@@ -5,12 +5,13 @@
 
 import Competitor from '../models/competitor-model.js';
 import Competition from '../models/competiton-model.js';
+import mongoose from 'mongoose';
 
 /**
  * @description Creates a new competition by randomly selecting two competitors from the database.
  */
 const createCompetiton = () => {
-    Competitor.aggregate([{$sample: {size: 2}}])
+    Competitor.aggregate([{ $sample: { size: 2 } }])
         .then((competitors) => {
 
             const competitionObj = {
@@ -31,13 +32,31 @@ const createCompetiton = () => {
                 totalVotes: 0,
             }
 
-            Competition.create(competitionObj, (err, competition) => {
+            Competition.create(competitionObj, (err) => {
                 if (err) {
                     console.error(err)
                 }
-                console.log(competition)
             })
         })
+}
+
+function getCompetitonAndSetWinner() {
+    Competition.find({}).sort({ createdAt: -1 }).limit(1)
+        .then(competitionData => {
+            const competition = competitionData[0];
+
+            if (competition.competitorOne.votes > competition.competitorTwo.votes) {
+                competition.competitorOne.winner = true;
+            } else {
+                competition.competitorTwo.winner = true;
+            }
+
+
+            return competition.save();
+        })
+        .catch(err => {
+            console.error(err);
+        });
 }
 
 /**
@@ -46,16 +65,57 @@ const createCompetiton = () => {
  * @param {Object} res - The response object.
  */
 const getCompetition = (req, res) => {
-    Competition.find({}).sort({createdAt: -1}).limit(1)
+    Competition.find({}).sort({ createdAt: -1 }).limit(1)
         .then(competition => {
-            return res.status(200).json({success: true, data: competition})
+            return res.status(200).json({ success: true, data: competition })
         })
         .catch(err => {
-            return res.status(400).json({success: false, error: err})
+            return res.status(400).json({ success: false, error: err })
+        });
+}
+
+const updateCompetition = (req, res) => {
+    const { data } = req.body;
+
+    if (!data || !data.competitionID || !data.competitorID) {
+        return res.status(400).json({ success: false, error: 'Invalid request data' });
+    }
+
+    Competition.findById(data.competitionID)
+        .then(competition => {
+            if (!competition) {
+                return res.status(404).json({ success: false, error: 'Competition not found' });
+            }
+
+            const newCompetitionVotes = competition.totalVotes + 1;
+            competition.totalVotes = newCompetitionVotes;
+
+            const competitorObjectId = mongoose.Types.ObjectId(data.competitorID);
+
+            if (competitorObjectId.equals(competition.competitorOne.id)) {
+                competition.competitorOne.votes += 1;
+            } else if (competitorObjectId.equals(competition.competitorTwo.id)) {
+                competition.competitorTwo.votes += 1;
+            }
+
+            return competition.save();
+        })
+}
+
+const getYesterdaysCompetition = (req, res) => {
+    Competition.find({}).sort({ createdAt: -1 }).skip(1).limit(1)
+        .then(competition => {
+            return res.status(200).json({ success: true, data: competition })
+        })
+        .catch(err => {
+            return res.status(400).json({ success: false, error: err })
         });
 }
 
 export {
     createCompetiton,
+    getCompetitonAndSetWinner,
     getCompetition,
+    updateCompetition,
+    getYesterdaysCompetition
 }

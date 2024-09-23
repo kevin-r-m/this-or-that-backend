@@ -12,9 +12,8 @@ dotenv.config();
 
 import db from './db/index.js';
 import checkApiKey from './utils/middleware.js';
-import competitorRouter from './routes/competitor-router.js';
 import competitionRouter from './routes/competition-router.js';
-import { createCompetiton } from './controllers/competition-controller.js';
+import { createCompetiton, getCompetitonAndSetWinner } from './controllers/competition-controller.js';
 
 const app = express();
 const apiPort = process.env.PORT || 8000;
@@ -32,6 +31,11 @@ app.get('/', (req, res) => {
 
 app.use('/api', competitionRouter);
 
-cron.schedule("0 0 * * *", () => createCompetiton());
+async function handleNewCompetition() {
+    await getCompetitonAndSetWinner();
+    createCompetiton();
+}
+
+cron.schedule("0 0 * * *", () => handleNewCompetition());
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));

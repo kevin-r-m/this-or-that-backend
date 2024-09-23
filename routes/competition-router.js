@@ -1,9 +1,11 @@
 import express from 'express';
-import { getCompetition } from '../controllers/competition-controller.js';
+import { getCompetition, getYesterdaysCompetition, updateCompetition } from '../controllers/competition-controller.js';
 
 const router = express.Router();
 
-router.get('/competition', getCompetition); // Assuming this is a POST request to create a competition
+router.get('/competition', getCompetition);
+router.get('/competition/yesterday', getYesterdaysCompetition);
+router.put('/competition', updateCompetition);
 
 export default router;
 
