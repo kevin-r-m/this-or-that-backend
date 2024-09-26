@@ -1,0 +1,706 @@
+[
+  {
+    "name": "Pineapple Pizza",
+    "description": "A controversial dish that combines the sweet flavor of pineapple with the savory essence of pizza. Its creation has sparked a debate that has raged for decades—should fruit really belong on pizza?",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Rubber Duck",
+    "description": "A classic bath-time companion, the rubber duck is small, squeaky, and yellow. It has achieved iconic status, bobbing its way into the hearts of children (and some adults) worldwide.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "The Eiffel Tower",
+    "description": "A wrought-iron lattice tower in Paris, France, originally constructed as the entrance to the 1889 World’s Fair. It’s now one of the most recognizable structures in the world and a global symbol of French elegance.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Velociraptor",
+    "description": "A small but fierce dinosaur known for its speed and intelligence. While it’s been exaggerated in movies like Jurassic Park, the real Velociraptor was about the size of a large turkey.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Flip Phone",
+    "description": "A relic of early 2000s technology, the flip phone offered the satisfying clamshell design that let you dramatically hang up on someone by snapping it shut. Nostalgic, but completely outdated by today’s smartphones.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Slinky",
+    "description": "A simple spring toy that can walk down stairs all by itself. First sold in 1945, the Slinky is an enduring toy that has amused generations with its gravity-defying stunts.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Quantum Leap",
+    "description": "A theoretical concept in quantum mechanics where particles can “leap” from one state to another without passing through intermediate states. It also inspired a popular 1990s TV show about time travel.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Yodeling",
+    "description": "A form of singing that involves rapid changes in pitch from low to high notes. Popular in the Swiss Alps and used to communicate across long distances, it’s also known for causing instant smiles and some confusion.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Hoverboard (2015)",
+    "description": "Not the flying skateboards we were promised by Back to the Future, but the two-wheeled, self-balancing scooters that took the world by storm in 2015. They’re fun to ride, until you run into a crack in the sidewalk.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Spam (Canned Meat)",
+    "description": "A mysterious pink block of processed meat in a can, Spam is loved by some and avoided by others. Introduced in 1937, it became an unexpected staple in global cuisine, especially in Hawaii.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Rock Paper Scissors",
+    "description": "A simple hand game often used to make quick decisions. With three possible moves (rock, paper, and scissors), it’s a game of chance—or is it strategy?",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Moon Boots",
+    "description": "Brightly colored, oversized boots from the ‘80s designed to make you feel like you’re walking on the moon. Not practical, but undeniably stylish.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bob Ross",
+    "description": "A soft-spoken artist with an iconic afro who hosted The Joy of Painting. Known for his “happy little trees” and peaceful demeanor, Bob Ross has become a symbol of calm creativity.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bagpipes",
+    "description": "A traditional Scottish instrument made from a bag and pipes. It produces a haunting, droning sound that can be both mournful and festive, depending on the occasion.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Fanny Pack",
+    "description": "A small pouch worn around the waist, the fanny pack peaked in popularity in the late ’80s and early ‘90s. Though often mocked, it’s surprisingly practical for carrying your stuff hands-free.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Lava Lamp",
+    "description": "A decorative lamp that features blobs of colorful wax suspended in liquid. As the wax heats up and cools down, it creates mesmerizing shapes and patterns that are both calming and hypnotic.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Rubik’s Cube",
+    "description": "A 3D combination puzzle that has baffled and entertained people since its invention in 1974. Some people spend hours solving it; others peel off the stickers in frustration.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "The Great Wall of China",
+    "description": "An ancient series of fortifications stretching across northern China. Built to protect against invasions, it’s now one of the most famous landmarks on Earth, though visible from space? Not really.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Segway",
+    "description": "A two-wheeled, self-balancing personal transport device that promised to revolutionize urban transportation. It didn’t, but it’s still fun for tourists and mall cops.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Space Invaders (1978 Video Game)",
+    "description": "A classic arcade game where players shoot rows of aliens descending from space. It sparked the golden age of video games and has remained a pop culture icon ever since.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Hot Air Balloon",
+    "description": "A large balloon filled with hot air that allows passengers to float peacefully through the sky. It’s the oldest form of human-carrying flight, yet still feels magical.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Disco Ball",
+    "description": "A mirrored sphere that spins and reflects light, instantly turning any room into a dance party. Iconic in 1970s nightclubs, but still a hit at modern parties.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bubble Wrap",
+    "description": "A packing material designed to protect fragile items, but beloved for the simple joy of popping its bubbles one by one (or all at once).",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Typewriter",
+    "description": "A mechanical device used for writing text by striking keys. Once a staple of offices worldwide, it’s now a nostalgic relic that makes satisfying 'clickety-clack' sounds.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Abacus",
+    "description": "An ancient counting tool with beads sliding on wires. Used for centuries before calculators, it’s still in use today in some parts of the world.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Unicorn",
+    "description": "A mythical creature resembling a horse with a single horn on its forehead. Known for its beauty, rarity, and tendency to appear on everything from t-shirts to notebooks.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Boomerang",
+    "description": "A curved throwing tool traditionally used by Indigenous Australians. Its unique design allows it to return to the thrower if thrown correctly—or disappear forever if not.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Microwave Popcorn",
+    "description": "A snack that’s prepared in mere minutes using a microwave. The smell of freshly popped popcorn is enough to make any room feel like a movie theater.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Roller Coaster",
+    "description": "A thrilling amusement park ride that consists of a fast-moving train on a track with loops, drops, and sharp turns. Both exhilarating and terrifying, depending on who you ask.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Swiss Army Knife",
+    "description": "A multi-tool pocketknife with a variety of attachments like blades, screwdrivers, and scissors. It’s the go-to tool for anyone looking to be prepared for anything.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Slime",
+    "description": "A gooey, stretchy substance loved by kids and adults alike. Whether homemade or store-bought, slime is fun to squish, pull, and poke for stress relief or amusement.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Kazoo",
+    "description": "A small, buzzing instrument that anyone can play by humming into it. Often used for comedic or playful music, it’s the sound of pure silliness.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Snow Globe",
+    "description": "A small, spherical ornament filled with water and glitter or “snow.” Shake it, and watch a magical snowstorm swirl around the mini-scene inside.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Ferris Wheel",
+    "description": "A giant rotating wheel with seats, offering breathtaking views from the top. A staple of fairs and amusement parks, it’s perfect for those who prefer a gentler ride.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bigfoot",
+    "description": "A legendary ape-like creature said to inhabit the forests of North America. Despite countless sightings, no definitive proof of its existence has been found.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Toast",
+    "description": "Bread that’s been browned by heat, often topped with butter, jam, or avocado. Simple yet universally loved, toast is a breakfast staple that can be endlessly customized.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Whoopee Cushion",
+    "description": "A classic prank device that simulates the sound of flatulence when someone sits on it. Cheap, funny, and perfect for anyone with a sense of humor that never grows up.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Pogo Stick",
+    "description": "A toy that lets the user bounce up and down on a spring-loaded stick. Fun for a while, until you realize how hard it is to stay balanced.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Giant Sequoia",
+    "description": "The world’s largest trees, found in California, known for their massive size and incredible longevity. They’ve been around for thousands of years, towering above the forest.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Neon Sign",
+    "description": "A glass tube filled with neon gas that glows brightly when electrified. Often used to advertise businesses, it’s a symbol of the retro-futuristic aesthetic.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Etch A Sketch",
+    "description": "A drawing toy with two knobs that control a stylus moving inside a screen. Twist them to create simple line drawings, and shake it to erase your masterpiece.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Pez Dispenser",
+    "description": "A small, collectible candy dispenser that releases Pez tablets when you tilt its character-themed head back. Both a sweet treat and a nostalgic toy.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Loch Ness Monster",
+    "description": "A mythical aquatic creature said to live in Loch Ness, Scotland. Affectionately called 'Nessie,' it’s the subject of many blurry photos and wild speculation.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Tupperware",
+    "description": "Plastic containers with airtight lids designed to keep food fresh. Known for their durability and for somehow always losing their lids in the kitchen.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Jigsaw Puzzle",
+    "description": "A picture broken into hundreds (or thousands) of interlocking pieces. Whether it’s a landscape or a picture of kittens, it’s an exercise in patience and spatial reasoning.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Dodo Bird",
+    "description": "An extinct flightless bird that lived on the island of Mauritius. The dodo has become a symbol of things that are gone but not forgotten.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Hovercraft",
+    "description": "A vehicle that glides over surfaces on a cushion of air. It can travel on land, water, and ice, making it both futuristic and practical for adventure seekers.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Piñata",
+    "description": "A brightly colored figure made from paper mache, filled with candy and prizes. It’s a party game where blindfolded participants take turns hitting it with a stick until it breaks open.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Marshmallow",
+    "description": "A soft, sweet treat often roasted over campfires or melted into hot chocolate. Light and fluffy, marshmallows bring a touch of fun to any dessert.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bonsai Tree",
+    "description": "A miniature tree grown and carefully pruned to look like its full-sized counterpart. Bonsai is both an art form and a practice of patience, representing beauty in simplicity.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Frisbee",
+    "description": "A flying disc that can be thrown long distances for fun or sport. Whether you’re playing a casual game of catch or engaging in an intense game of Ultimate Frisbee, it’s a classic outdoor activity.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Lava",
+    "description": "Molten rock that flows from a volcano during an eruption. Both dangerous and mesmerizing, lava can destroy everything in its path, yet creates new land when it cools.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Tape Measure",
+    "description": "A retractable tool used to measure length, usually marked in inches and centimeters. It’s handy for construction projects, but also for settling arguments about height.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Roomba",
+    "description": "A robotic vacuum cleaner that autonomously navigates your home, picking up dirt and dust. It’s both a marvel of modern convenience and a source of endless amusement for pets.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "UFO",
+    "description": "Unidentified flying objects have captured the human imagination for decades, with sightings sparking debates about alien life. Whether real or fictional, UFOs are synonymous with mystery and wonder.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Coffee Mug",
+    "description": "A sturdy cup, usually with a handle, designed for holding hot beverages. Whether you’re drinking coffee, tea, or hot chocolate, a good mug can make the experience better.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Cassette Tape",
+    "description": "A magnetic tape format for audio recording and playback, popular in the 1970s and ’80s. Once the pinnacle of portable music, it’s now a nostalgic throwback for retro enthusiasts.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Ninja Stars",
+    "description": "Also known as shuriken, these small, bladed weapons were used by ninjas in feudal Japan. They’re sharp, stealthy, and iconic in martial arts lore.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Tetris",
+    "description": "A puzzle video game where players fit falling blocks together to clear lines. Simple but addictive, Tetris has been a global sensation since its release in 1984.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Velcro",
+    "description": "A hook-and-loop fastening system that makes a satisfying ripping sound when pulled apart. Invented in 1941, it’s become a go-to fastener for shoes, bags, and more.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Potato Battery",
+    "description": "A simple science experiment where a potato is used to power a small device. The potato acts as an electrolyte, generating enough electricity to light a tiny bulb.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Toga",
+    "description": "A garment worn by ancient Romans, draped around the body in a distinctive style. It’s since become the attire of choice for college students at toga parties.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Pet Rock",
+    "description": "A smooth rock sold as a low-maintenance pet in the 1970s. It came with a box, breathing holes, and a care manual, proving that sometimes the simplest ideas are the most successful.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Chia Pet",
+    "description": "A terra cotta figurine that grows chia seeds into a lush, green coat. Chia Pets have been sprouting in homes since the 1980s, with endless designs and themes.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Flamingo Lawn Ornament",
+    "description": "A bright pink plastic flamingo that’s been a kitschy symbol of suburban yards since the 1950s. Loved by some, loathed by others, but undeniably iconic.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Commodore 64",
+    "description": "A personal computer released in the early 1980s, known for its advanced graphics and sound. It was a gaming powerhouse and a gateway to the digital age for many.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Piñata",
+    "description": "A brightly colored figure made from paper mache, filled with candy and prizes. It’s a party game where blindfolded participants take turns hitting it with a stick until it breaks open.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Marshmallow",
+    "description": "A soft, sweet treat often roasted over campfires or melted into hot chocolate. Light and fluffy, marshmallows bring a touch of fun to any dessert.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Bonsai Tree",
+    "description": "A miniature tree grown and carefully pruned to look like its full-sized counterpart. Bonsai is both an art form and a practice of patience, representing beauty in simplicity.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Frisbee",
+    "description": "A flying disc that can be thrown long distances for fun or sport. Whether you’re playing a casual game of catch or engaging in an intense game of Ultimate Frisbee, it’s a classic outdoor activity.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Lava",
+    "description": "Molten rock that flows from a volcano during an eruption. Both dangerous and mesmerizing, lava can destroy everything in its path, yet creates new land when it cools.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Tape Measure",
+    "description": "A retractable tool used to measure length, usually marked in inches and centimeters. It’s handy for construction projects, but also for settling arguments about height.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Roomba",
+    "description": "A robotic vacuum cleaner that autonomously navigates your home, picking up dirt and dust. It’s both a marvel of modern convenience and a source of endless amusement for pets.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "UFO",
+    "description": "Unidentified flying objects have captured the human imagination for decades, with sightings sparking debates about alien life. Whether real or fictional, UFOs are synonymous with mystery and wonder.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Coffee Mug",
+    "description": "A sturdy cup, usually with a handle, designed for holding hot beverages. Whether you’re drinking coffee, tea, or hot chocolate, a good mug can make the experience better.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Cassette Tape",
+    "description": "A magnetic tape format for audio recording and playback, popular in the 1970s and ’80s. Once the pinnacle of portable music, it’s now a nostalgic throwback for retro enthusiasts.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Ninja Stars",
+    "description": "Also known as shuriken, these small, bladed weapons were used by ninjas in feudal Japan. They’re sharp, stealthy, and iconic in martial arts lore.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Tetris",
+    "description": "A puzzle video game where players fit falling blocks together to clear lines. Simple but addictive, Tetris has been a global sensation since its release in 1984.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Velcro",
+    "description": "A hook-and-loop fastening system that makes a satisfying ripping sound when pulled apart. Invented in 1941, it’s become a go-to fastener for shoes, bags, and more.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Potato Battery",
+    "description": "A simple science experiment where a potato is used to power a small device. The potato acts as an electrolyte, generating enough electricity to light a tiny bulb.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Toga",
+    "description": "A garment worn by ancient Romans, draped around the body in a distinctive style. It’s since become the attire of choice for college students at toga parties.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Pet Rock",
+    "description": "A smooth rock sold as a low-maintenance pet in the 1970s. It came with a box, breathing holes, and a care manual, proving that sometimes the simplest ideas are the most successful.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Chia Pet",
+    "description": "A terra cotta figurine that grows chia seeds into a lush, green coat. Chia Pets have been sprouting in homes since the 1980s, with endless designs and themes.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Flamingo Lawn Ornament",
+    "description": "A bright pink plastic flamingo that’s been a kitschy symbol of suburban yards since the 1950s. Loved by some, loathed by others, but undeniably iconic.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Commodore 64",
+    "description": "A personal computer released in the early 1980s, known for its massive popularity and role in the home computing revolution. It introduced millions of people to video games and programming.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Slap Bracelet",
+    "description": "A toy bracelet that straightens out when pulled, but snaps into place when slapped onto the wrist. It was a 90s playground craze, combining fashion and fun.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "S’mores",
+    "description": "A delicious treat made by sandwiching toasted marshmallows and chocolate between graham crackers. Best enjoyed around a campfire, s’mores are the essence of summer.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  },
+  {
+    "name": "Pringles Can",
+    "description": "A cylindrical container that holds stackable potato chips. Its unique shape and sound when popping open have made it iconic in the world of snacks.",
+    "image": "",
+    "wins": 0,
+    "losses": 0,
+    "totalVotes": 0
+  }
+]
