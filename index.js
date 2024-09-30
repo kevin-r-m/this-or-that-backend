@@ -13,6 +13,7 @@ dotenv.config();
 import db from './db/index.js';
 import checkApiKey from './utils/middleware.js';
 import competitionRouter from './routes/competition-router.js';
+import competitorRouter from './routes/competitor-router.js';
 import { createCompetiton, getCompetitonAndSetWinner } from './controllers/competition-controller.js';
 
 const app = express();
@@ -30,6 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', competitionRouter);
+app.use('/api', competitorRouter);
 
 async function handleNewCompetition() {
     await getCompetitonAndSetWinner();

@@ -107,9 +107,26 @@ const getCompetitors = async (req, res) => {
     }).clone().catch(err => console.log(err))
 }
 
+const updateCompetitorImage = async (req, res) => {
+    await Competitor.findOneAndUpdate({ _id: req.body.id }, { image: req.body.image }, (err, competitor) => {
+        if (err) {
+            return res.status(404).json({
+                err,
+                message: 'Competitor not found!',
+            })
+        }
+        return res.status(200).json({
+            success: true,
+            message: 'Competitor image updated!',
+        })
+    }).catch(err => console.log(err))
+}
+
+
 export {
     createCompetitor,
     deleteCompetitor,
     getCompetitors,
     getCompetitorById,
+    updateCompetitorImage
 }
