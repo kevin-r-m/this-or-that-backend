@@ -6,6 +6,11 @@
 import Competitor from '../models/competitor-model.js';
 import Competition from '../models/competiton-model.js';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config();
+const SIMULATE_USERS = process.env.SIMULATE_USERS;
+
 
 /**
  * @description Creates a new competition by randomly selecting two competitors from the database.
@@ -14,22 +19,26 @@ const createCompetiton = () => {
     Competitor.aggregate([{ $sample: { size: 2 } }])
         .then((competitors) => {
 
+            const competitorOneVotes = SIMULATE_USERS ? Math.floor(Math.random() * 100) : 0;
+            const competitorTwoVotes = SIMULATE_USERS ? Math.floor(Math.random() * 100) : 0;
+            const totalVotes = competitorOneVotes + competitorTwoVotes;
+
             const competitionObj = {
                 competitorOne: {
                     id: competitors[0]._id,
                     name: competitors[0].name,
                     image: competitors[0].image,
-                    votes: 0,
+                    votes: competitorOneVotes,
                     winner: false,
                 },
                 competitorTwo: {
                     id: competitors[1]._id,
                     name: competitors[1].name,
                     image: competitors[1].image,
-                    votes: 0,
+                    votes: competitorTwoVotes,
                     winner: false,
                 },
-                totalVotes: 0,
+                totalVotes: totalVotes,
             }
 
             Competition.create(competitionObj, (err) => {
