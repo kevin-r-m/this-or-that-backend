@@ -45,7 +45,7 @@ const Competition = new Schema(
             type: Number
         }
     },
-    {timestamps: true}
+    { timestamps: true }
 );
 
 export default mongoose.model('competition', Competition);
