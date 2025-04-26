@@ -45,6 +45,12 @@ function getCompetitonAndSetWinner() {
         .then(competitionData => {
             const competition = competitionData[0];
 
+            if (competition.competitorOne.votes === competition.competitorTwo.votes) {
+                competition.competitorOne.winner = false;
+                competition.competitorTwo.winner = false;
+                return competition.save();
+            }
+
             if (competition.competitorOne.votes > competition.competitorTwo.votes) {
                 competition.competitorOne.winner = true;
             } else {
