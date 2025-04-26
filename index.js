@@ -17,7 +17,8 @@ import competitorRouter from './routes/competitor-router.js';
 import { createCompetiton, getCompetitonAndSetWinner } from './controllers/competition-controller.js';
 
 const app = express();
-const apiPort = process.env.PORT || 8000;
+const API_PORT = process.env.PORT || 8000;
+const API_ENDPOINT = '/api';
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -30,8 +31,8 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-app.use('/api', competitionRouter);
-app.use('/api', competitorRouter);
+app.use(API_ENDPOINT, competitionRouter);
+app.use(API_ENDPOINT, competitorRouter);
 
 async function handleNewCompetition() {
     await getCompetitonAndSetWinner();
@@ -40,4 +41,4 @@ async function handleNewCompetition() {
 
 cron.schedule("0 0 * * *", () => handleNewCompetition());
 
-app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
+app.listen(API_PORT, () => console.log(`Server running on port ${API_PORT}`));
