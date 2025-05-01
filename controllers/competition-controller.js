@@ -16,7 +16,7 @@ const SIMULATE_USERS = process.env.SIMULATE_USERS;
  * @description Creates a new competition by randomly selecting two competitors from the database.
  */
 const createCompetiton = () => {
-    Competitor.aggregate([{ $sample: { size: 2 } }])
+    getEligibleCompetitorsPair()
         .then((competitors) => {
 
             const competitorOneVotes = SIMULATE_USERS ? Math.floor(Math.random() * 100) : 0;
@@ -48,6 +48,22 @@ const createCompetiton = () => {
             })
         })
 }
+
+async function getEligibleCompetitorsPair() {
+    const competitions = await Competition.find({}).sort({ createdAt: -1 }).limit(5);
+    const competitorIds = competitions.map(competition => {
+        return [
+            competition.competitorOne.id,
+            competition.competitorTwo.id
+        ]
+    }).flat();
+    const uniqueCompetitorIds = [...new Set(competitorIds)];
+    return Competitor.aggregate([
+        { $match: { _id: { $nin: uniqueCompetitorIds } } },
+        { $sample: { size: 2 } }
+    ]);
+}
+
 
 function getCompetitonAndSetWinner() {
     Competition.find({}).sort({ createdAt: -1 }).limit(1)
