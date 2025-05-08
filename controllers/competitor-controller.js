@@ -21,7 +21,7 @@ const createCompetitor = (req, res) => {
         })
     }
 
-    const competitor = new Competitor(body)
+    const competitor = new Competitor(body);
 
     if (!competitor) {
         return res.status(400).json({ success: false, error: err })
