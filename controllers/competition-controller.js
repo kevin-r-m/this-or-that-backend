@@ -15,7 +15,7 @@ const SIMULATE_USERS = process.env.SIMULATE_USERS;
 /**
  * @description Creates a new competition by randomly selecting two competitors from the database.
  */
-const createCompetiton = () => {
+const createNewCompetition = () => {
     getEligibleCompetitorsPair()
         .then((competitors) => {
 
@@ -50,44 +50,50 @@ const createCompetiton = () => {
 }
 
 async function getEligibleCompetitorsPair() {
-    const competitions = await Competition.find({}).sort({ createdAt: -1 }).limit(5);
-    const competitorIds = competitions.map(competition => {
-        return [
-            competition.competitorOne.id,
-            competition.competitorTwo.id
-        ]
-    }).flat();
-    const uniqueCompetitorIds = [...new Set(competitorIds)];
+    const recentCompetitions = await getRecentCompetitions();
+
+    const recentIds = recentCompetitions.flatMap(({ competitorOne, competitorTwo }) => [
+        competitorOne.id,
+        competitorTwo.id,
+    ]);
+
     return Competitor.aggregate([
-        { $match: { _id: { $nin: uniqueCompetitorIds } } },
-        { $sample: { size: 2 } }
+        { $match: { _id: { $nin: recentIds } } },
+        { $sample: { size: 2 } },
     ]);
 }
 
-
-function getCompetitonAndSetWinner() {
-    Competition.find({}).sort({ createdAt: -1 }).limit(1)
-        .then(competitionData => {
-            const competition = competitionData[0];
-
-            if (competition.competitorOne.votes === competition.competitorTwo.votes) {
-                competition.competitorOne.winner = false;
-                competition.competitorTwo.winner = false;
-                return competition.save();
-            }
-
-            if (competition.competitorOne.votes > competition.competitorTwo.votes) {
-                competition.competitorOne.winner = true;
-            } else {
-                competition.competitorTwo.winner = true;
-            }
+function getRecentCompetitions() {
+    return Competition.find({}, { competitorOne: 1, competitorTwo: 1 })
+        .sort({ createdAt: -1 })
+        .limit(5)
+        .lean();
+}
 
 
-            return competition.save();
-        })
-        .catch(err => {
-            console.error(err);
-        });
+async function reconcileCurrentCompetition() {
+    try {
+        const competitionData = await Competition.find({}).sort({ createdAt: -1 }).limit(1);
+        const competition = competitionData[0];
+
+        if (!competition) {
+            console.error('No competition found');
+            return;
+        }
+
+        if (competition.competitorOne.votes === competition.competitorTwo.votes) {
+            competition.competitorOne.winner = false;
+            competition.competitorTwo.winner = false;
+        } else if (competition.competitorOne.votes > competition.competitorTwo.votes) {
+            competition.competitorOne.winner = true;
+        } else {
+            competition.competitorTwo.winner = true;
+        }
+
+        await competition.save();
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 /**
@@ -144,8 +150,8 @@ const getYesterdaysCompetition = (req, res) => {
 }
 
 export {
-    createCompetiton,
-    getCompetitonAndSetWinner,
+    createNewCompetition,
+    reconcileCurrentCompetition,
     getCompetition,
     updateCompetition,
     getYesterdaysCompetition

@@ -14,7 +14,7 @@ import db from './db/index.js';
 import checkApiKey from './utils/middleware.js';
 import competitionRouter from './routes/competition-router.js';
 import competitorRouter from './routes/competitor-router.js';
-import { createCompetiton, getCompetitonAndSetWinner } from './controllers/competition-controller.js';
+import { createNewCompetition, reconcileCurrentCompetition } from './controllers/competition-controller.js';
 
 const app = express();
 const API_PORT = process.env.PORT || 8000;
@@ -27,18 +27,14 @@ app.use(checkApiKey);
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
 app.use(API_ENDPOINT, competitionRouter);
 app.use(API_ENDPOINT, competitorRouter);
 
-async function handleNewCompetition() {
-    await getCompetitonAndSetWinner();
-    createCompetiton();
+async function rotateDailyCompetition() {
+    await reconcileCurrentCompetition();
+    createNewCompetition();
 }
 
-cron.schedule("0 0 * * *", () => handleNewCompetition());
+cron.schedule("0 0 * * *", () => rotateDailyCompetition());
 
 app.listen(API_PORT, () => console.log(`Server running on port ${API_PORT}`));
