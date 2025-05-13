@@ -10,6 +10,18 @@ const openai = new OpenAI({
     apiKey: process.env.VITE_OPENAI_API_KEY,
 });
 
+export async function runDescriptionStream(value) {
+    const thread = await resolveThread();
+    await openai.beta.threads.messages.create(thread.id, {
+        role: 'user',
+        content: value,
+    });
+
+    return openai.beta.threads.runs.stream(thread.id, {
+        assistant_id: process.env.VITE_OPENAI_ASSISTANT_ID,
+    });
+}
+
 async function resolveThread() {
     const threadDoc = await getOrCreateThread();
     return openai.beta.threads.retrieve(threadDoc.threadId);
@@ -23,16 +35,4 @@ async function getOrCreateThread() {
         await thread.save();
     }
     return thread;
-}
-
-export async function runDescriptionStream(value) {
-    const thread = await resolveThread();
-    await openai.beta.threads.messages.create(thread.id, {
-        role: 'user',
-        content: value,
-    });
-
-    return openai.beta.threads.runs.stream(thread.id, {
-        assistant_id: process.env.VITE_OPENAI_ASSISTANT_ID,
-    });
 }
