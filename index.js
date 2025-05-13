@@ -14,6 +14,8 @@ import db from './db/index.js';
 import checkApiKey from './utils/middleware.js';
 import competitionRouter from './routes/competition-router.js';
 import competitorRouter from './routes/competitor-router.js';
+import agentRouter from './routes/agent-router.js';
+
 import { createNewCompetition, reconcileCurrentCompetition } from './controllers/competition-controller.js';
 
 const app = express();
@@ -29,6 +31,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(API_ENDPOINT, competitionRouter);
 app.use(API_ENDPOINT, competitorRouter);
+app.use(`${API_ENDPOINT}/agent`, agentRouter);
 
 async function rotateDailyCompetition() {
     await reconcileCurrentCompetition();
