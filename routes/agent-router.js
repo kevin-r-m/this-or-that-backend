@@ -13,7 +13,6 @@ router.post('/streamDescription', async (req, res) => {
     try {
         const stream = await runDescriptionStream(value);
 
-
         for await (const chunk of stream) {
             const content = chunk.data?.delta?.content[0]?.text.value;
             if (content) {
