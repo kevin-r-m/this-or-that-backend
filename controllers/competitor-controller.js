@@ -44,6 +44,32 @@ const createCompetitor = (req, res) => {
         })
 }
 
+const createCompetitorsBulk = async (req, res) => {
+    const competitors = req.body;
+
+    if (!competitors || !Array.isArray(competitors)) {
+        return res.status(400).json({
+            success: false,
+            error: 'You must provide an array of competitors',
+        });
+    }
+
+    try {
+        const createdCompetitors = await Competitor.insertMany(competitors);
+        return res.status(201).json({
+            success: true,
+            data: createdCompetitors,
+            message: 'Competitors created!',
+        });
+    } catch (error) {
+        return res.status(400).json({
+            error,
+            message: 'Competitors not created!',
+        });
+    }
+}
+
+
 /**
  * @description Delete a competitor by ID.
  * @param {Object} req - The request object.
@@ -122,11 +148,34 @@ const updateCompetitorImage = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+const fuzzySearchCompetitors = async (searchTerm) => {
+    const query = [
+        {
+            $search: {
+                text: {
+                    query: searchTerm,
+                    path: 'name',
+                },
+            },
+        },
+        {
+            $limit: 1,
+        },
+    ];
+
+    try {
+        return await Competitor.aggregate(query);
+    } catch (error) {
+        console.error('Error during fuzzy search:', error);
+    }
+};
 
 export {
     createCompetitor,
     deleteCompetitor,
     getCompetitors,
     getCompetitorById,
-    updateCompetitorImage
+    updateCompetitorImage,
+    fuzzySearchCompetitors,
+    createCompetitorsBulk
 }

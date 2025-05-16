@@ -5,9 +5,9 @@ import Thread from '../models/thread-model.js';
 dotenv.config();
 
 const openai = new OpenAI({
-    organization: process.env.VITE_OPENAI_ORG_ID,
-    project: process.env.VITE_OPENAI_PROJ_ID,
-    apiKey: process.env.VITE_OPENAI_API_KEY,
+    organization: process.env.OPENAI_ORG_ID,
+    project: process.env.OPENAI_PROJ_ID,
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function runDescriptionStream(value) {
@@ -18,8 +18,31 @@ export async function runDescriptionStream(value) {
     });
 
     return openai.beta.threads.runs.stream(thread.id, {
-        assistant_id: process.env.VITE_OPENAI_ASSISTANT_ID_DESCRIBER,
+        assistant_id: process.env.OPENAI_ASSISTANT_ID_DESCRIBER,
     });
+}
+
+export async function runCompetitorGeneration(numberOfCompetitors) {
+    const thread = await resolveThread('Generator');
+
+    await openai.beta.threads.messages.create(thread.id, {
+        role: 'user',
+        content: numberOfCompetitors,
+    });
+
+    const run = await openai.beta.threads.runs.createAndPoll(thread.id, {
+        assistant_id: process.env.OPENAI_ASSISTANT_ID_GENERATOR,
+    });
+
+    if (run.status === 'completed') {
+        const messages = await openai.beta.threads.messages.list(thread.id);
+
+        const assistantMessagesForRun = messages.data.find(msg =>
+            msg.role === 'assistant' && msg.run_id === run.id
+        );
+
+        return assistantMessagesForRun.content[0].text.value;
+    }
 }
 
 async function resolveThread(assistantType) {
