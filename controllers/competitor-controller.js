@@ -119,7 +119,7 @@ const getCompetitorById = async (req, res) => {
  * @param {Object} res - The response object.
  * @returns {Object} The response object.
  */
-const getCompetitors = async (req, res) => {
+const getCompetitors = async (_, res) => {
     await Competitor.find({}, (err, competitors) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })

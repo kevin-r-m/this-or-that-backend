@@ -70,6 +70,16 @@ function getRecentCompetitions() {
         .lean();
 }
 
+async function getAllCompetitions(_, res) {
+    try {
+        const competitions = await Competition.find({}).sort({ createdAt: -1 }).lean();
+        res.status(200).json({ data: competitions });
+    } catch (error) {
+        console.error('Error fetching competitions:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
+
 
 async function reconcileCurrentCompetition() {
     try {
@@ -153,6 +163,7 @@ export {
     createNewCompetition,
     reconcileCurrentCompetition,
     getCompetition,
+    getAllCompetitions,
     updateCompetition,
     getYesterdaysCompetition
 }
